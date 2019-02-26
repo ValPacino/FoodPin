@@ -20,7 +20,7 @@ class RestaurantTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.cellLayoutMarginsFollowReadableWidth = true
+        tableView.cellLayoutMarginsFollowReadableWidth = true //Cette méthode permet d'adapter le layout (cell width) pour iPad
         // Do any additional setup after loading the view.
     }
     
@@ -50,21 +50,34 @@ class RestaurantTableViewController: UITableViewController {
         return cell
     }
     
+    //Cette méthode est appelé à chaque fois que l'on touche une cellule de la UITableView
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //On déclare un UIAlertController qui s'affichera lors de l'interaction avec la cellule
         let optionMenu = UIAlertController(title: nil, message: "What do you want to do ?", preferredStyle: .actionSheet)
         
+        //On déclare une action (en lien avec le UIAlertController)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
+        //On ajoute l'action à notre UIAlertController
+        optionMenu.addAction(cancelAction)
         
+        //Voici comment faire un callActionHandler
         let callActionHandler = { (action: UIAlertAction) -> Void in
+            //Comme en haut, on créer une action  qu'on ajoutera à notre UIAlerteController
             let alertMessage = UIAlertController(title: "Service Unvailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
             alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            //Pour afficher l'UIAlertcontroller
             self.present(alertMessage, animated: true, completion: nil)
         }
         
+        //Dans cette UIAlerteAction, on rajoute le callActionHandler écrit plus haut, il sera affiché lors de l'interaction avec cette action là
         let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
         
-        let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {(action:UIAlertAction!) -> Void in
+        optionMenu.addAction(callAction)
+        
+        //Voici comment gérer les actions avec les cellules via le système d'"alerte"
+        let checkInAction = UIAlertAction(title: "Heart it", style: .default, handler: {(action:UIAlertAction!) -> Void in
             let cell = tableView.cellForRow(at: indexPath)
             
             if self.restaurantIsVisited[indexPath.row] == false {
@@ -76,13 +89,13 @@ class RestaurantTableViewController: UITableViewController {
             }
         })
         
-        optionMenu.addAction(cancelAction)
-        optionMenu.addAction(callAction)
         optionMenu.addAction(checkInAction)
         present(optionMenu, animated: true, completion: nil)
         
+        //Ne pas afficher le gris quand on intéragit avec la cellule
         tableView.deselectRow(at: indexPath, animated: false)
         
+        //Layout iPad
         if let popoverController = optionMenu.popoverPresentationController {
             if let cell = tableView.cellForRow(at: indexPath) {
                 popoverController.sourceView = cell
