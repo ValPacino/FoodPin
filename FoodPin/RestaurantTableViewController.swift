@@ -24,6 +24,18 @@ class RestaurantTableViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! RestaurantDetailViewController
+                destinationController.restaurantImageName = restaurantNames[indexPath.row]
+                destinationController.restaurantName_ = restaurantNames[indexPath.row]
+                destinationController.restaurantLocation_ = restaurantLocations[indexPath.row]
+                destinationController.restaurantType_ = restaurantTypes[indexPath.row]
+            }
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -50,60 +62,6 @@ class RestaurantTableViewController: UITableViewController {
         return cell
     }
     
-    //Cette méthode est appelé à chaque fois que l'on touche une cellule de la UITableView
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //On déclare un UIAlertController qui s'affichera lors de l'interaction avec la cellule
-        let optionMenu = UIAlertController(title: nil, message: "What do you want to do ?", preferredStyle: .actionSheet)
-        
-        //Layout iPad
-        if let popoverController = optionMenu.popoverPresentationController {
-            if let cell = tableView.cellForRow(at: indexPath) {
-                popoverController.sourceView = cell
-                popoverController.sourceRect = cell.bounds
-            }
-        }
-        
-        //On déclare une action (en lien avec le UIAlertController)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        //On ajoute l'action à notre UIAlertController
-        optionMenu.addAction(cancelAction)
-        
-        //Voici comment faire un callActionHandler
-        let callActionHandler = { (action: UIAlertAction) -> Void in
-            //Comme en haut, on créer une action  qu'on ajoutera à notre UIAlerteController
-            let alertMessage = UIAlertController(title: "Service Unvailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            
-            //Pour afficher l'UIAlertcontroller
-            self.present(alertMessage, animated: true, completion: nil)
-        }
-        
-        //Dans cette UIAlerteAction, on rajoute le callActionHandler écrit plus haut, il sera affiché lors de l'interaction avec cette action là
-        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
-        
-        optionMenu.addAction(callAction)
-        
-        //Voici comment gérer les actions avec les cellules via le système d'"alerte"
-        let checkInAction = UIAlertAction(title: "Heart it", style: .default, handler: {(action:UIAlertAction!) -> Void in
-            let cell = tableView.cellForRow(at: indexPath)
-            
-            if self.restaurantIsVisited[indexPath.row] == false {
-                cell?.accessoryView = UIImageView(image: UIImage(named: "heart-tick"))
-                self.restaurantIsVisited[indexPath.row] = true
-            } else {
-                cell?.accessoryView = .none
-                self.restaurantIsVisited[indexPath.row] = false
-            }
-        })
-        
-        optionMenu.addAction(checkInAction)
-        
-        present(optionMenu, animated: true, completion: nil)
-        
-        //Ne pas afficher le gris quand on intéragit avec la cellule
-        tableView.deselectRow(at: indexPath, animated: false)
-    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     }
