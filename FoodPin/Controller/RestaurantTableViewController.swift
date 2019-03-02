@@ -9,14 +9,29 @@
 import UIKit
 
 class RestaurantTableViewController: UITableViewController {
-
-    var restaurantNames = ["Cafe Deadend","Homei","Teakha","Cafe Loisl","Petite Oyster","For Kee Restaurant","Po's Atelier","Bourke Street Bakery","Haigh's Chocolate","Palomino Espresso","Upstate","Traif","Graham Avenue Meats And Deli","Waffle & Wolf","Five Leaves","Cafe Lore","Confessional","Barrafina","Donostia","Royal Oak","CASK Pub and Kitchen"]
     
-    var restaurantLocations = ["Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Sidney","Sidney","Sidney","New York","New York","New York","New York","New York","New York","New York","London","London","London","London"]
-    
-    var restaurantTypes = ["Coffe & Tea Shop","Cafe","Tea House","Austrian / Causual Drink","French","Bakery","Chocolate","Cafe","Americain / Seafood","American","American","Breakfast & Brunch","Coffee & Tea","Coffe & Tea","Coffea & Tea","Latin America","Spanish","Spanish","Spanish","British","Thai"]
-    
-    var restaurantIsVisited = Array(repeating: false, count: 21)
+    var restaurants: [Restaurant] = [
+        Restaurant(name: "Cafe Deadend", type: "Coffe & Tea Shop", location: "Honk Kong", isVisited: false),
+        Restaurant(name: "Teakha", type: "Cafe", location: "Honk Kong", isVisited: false),
+        Restaurant(name: "Cafe Loisl", type: "Tea House", location: "Honk Kong", isVisited: false),
+        Restaurant(name: "Petite Oyster", type: "Austrian / Causual Drink", location: "Honk Kong", isVisited: false),
+        Restaurant(name: "For Kee Restaurant", type: "French", location: "Honk Kong", isVisited: false),
+        Restaurant(name: "Po's Atelier", type: "Chocolate", location: "Honk Kong", isVisited: false),
+        Restaurant(name: "Bourke Street Bakery", type: "Cafe", location: "Sidney", isVisited: false),
+        Restaurant(name: "Haigh's Chocolate", type: "Americain / Seafood", location: "Sidney", isVisited: false),
+        Restaurant(name: "Palomino Espresso", type: "American", location: "Sidney", isVisited: false),
+        Restaurant(name: "Upstate", type: "Breakfast & Brunch", location: "New York", isVisited: false),
+        Restaurant(name: "Traif", type: "Coffee & Tea", location: "New York", isVisited: false),
+        Restaurant(name: "Graham Avenue Meats And Deli", type: "Coffee & Tea", location: "New York", isVisited: false),
+        Restaurant(name: "Waffle & Wolf", type: "Coffee & Tea", location: "New York", isVisited: false),
+        Restaurant(name: "Five Leaves", type: "Coffee & Tea", location: "New York", isVisited: false),
+        Restaurant(name: "Cafe Lore", type: "Latin America", location: "New York", isVisited: false),
+        Restaurant(name: "Confessional", type: "Spanish", location: "New York", isVisited: false),
+        Restaurant(name: "Barrafina", type: "Spanish", location: "London", isVisited: false),
+        Restaurant(name: "Donostia", type: "Spanish", location: "London", isVisited: false),
+        Restaurant(name: "Royal Oak", type: "British", location: "London", isVisited: false),
+        Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "London", isVisited: false),
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +43,7 @@ class RestaurantTableViewController: UITableViewController {
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
-                destinationController.restaurantImageName = restaurantNames[indexPath.row]
-                destinationController.restaurantName_ = restaurantNames[indexPath.row]
-                destinationController.restaurantLocation_ = restaurantLocations[indexPath.row]
-                destinationController.restaurantType_ = restaurantTypes[indexPath.row]
+                destinationController.restaurant = restaurants[indexPath.row]
             }
         }
     }
@@ -41,19 +53,19 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantNames.count
+        return restaurants.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
         
-        cell.nameLabel.text = restaurantNames[indexPath.row] //On assigne comme valeur au text l'élément de notre tableau.
-        cell.locationLabel.text = restaurantLocations[indexPath.row]
-        cell.typeLabel.text = restaurantTypes[indexPath.row]
-        cell.thumbnailImageView.image = UIImage(named: restaurantNames[indexPath.row]) // On ajoute une image à la cellule
+        cell.nameLabel.text = restaurants[indexPath.row].name //On assigne comme valeur au text l'élément de notre tableau.
+        cell.locationLabel.text = restaurants[indexPath.row].location
+        cell.typeLabel.text = restaurants[indexPath.row].type
+        cell.thumbnailImageView.image = UIImage(named: restaurants[indexPath.row].image) // On ajoute une image à la cellule
         
-        if restaurantIsVisited[indexPath.row] == true {
+        if restaurants[indexPath.row].isVisited == true {
             cell.accessoryView = UIImageView(image: UIImage(named: "heart-tick"))
         } else {
             cell.accessoryView = .none
@@ -71,10 +83,7 @@ class RestaurantTableViewController: UITableViewController {
         
         //Un bouton delete s'affiche sur la droite, il fera les actions demandés
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action,sourceView,completionHandler) in
-            self.restaurantNames.remove(at: indexPath.row)
-            self.restaurantLocations.remove(at: indexPath.row)
-            self.restaurantTypes.remove(at: indexPath.row)
-            self.restaurantIsVisited.remove(at: indexPath.row)
+            self.restaurants.remove(at: indexPath.row)
             
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             
@@ -84,12 +93,12 @@ class RestaurantTableViewController: UITableViewController {
         
         
         let shareAction = UIContextualAction(style: .normal, title: "Share") { (action,sourceView,completionHandler) in
-            let defaultText = "Just checking at " + self.restaurantNames[indexPath.row]
+            let defaultText = "Just checking at " + self.restaurants[indexPath.row].name
             
             //Un UIActivityController permet d'afficher un menu pour paratager le contenu souhaité
             let activityController : UIActivityViewController
             
-            if let imageToShare = UIImage(named: self.restaurantNames[indexPath.row]) {
+            if let imageToShare = UIImage(named: self.restaurants[indexPath.row].name) {
                 activityController = UIActivityViewController(activityItems: [defaultText,imageToShare], applicationActivities: nil)
             } else {
                 activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
@@ -126,19 +135,19 @@ class RestaurantTableViewController: UITableViewController {
         let checkAction = UIContextualAction(style: .normal, title: "check") { (action,sourceView,completionHandler) in
             let cell = tableView.cellForRow(at: indexPath)
             
-            if self.restaurantIsVisited[indexPath.row] == false {
+            if self.restaurants[indexPath.row].isVisited == false {
                 cell?.accessoryView = UIImageView(image: UIImage(named: "heart-tick"))
-                self.restaurantIsVisited[indexPath.row] = true
+                self.restaurants[indexPath.row].isVisited = true
             } else {
                 cell?.accessoryView = .none
-                self.restaurantIsVisited[indexPath.row] = false
+                self.restaurants[indexPath.row].isVisited = false
             }
             
             completionHandler(true)
         }
         
         checkAction.backgroundColor = .green
-        if self.restaurantIsVisited[indexPath.row] == false {
+        if self.restaurants[indexPath.row].isVisited == false {
             checkAction.image = UIImage(named: "tick")
         } else {
             checkAction.image = UIImage(named: "undo")
