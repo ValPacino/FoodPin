@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE447ED0222F059A0049B1AF /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE447ECF222F059A0049B1AF /* UIColor+Ext.swift */; };
 		DE519729222860CC007FF87B /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE519728222860CC007FF87B /* RestaurantDetailViewController.swift */; };
 		DE68D19922246CA000D86E4A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */; };
 		DE68D19B2224762F00D86E4A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE447ECF222F059A0049B1AF /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		DE519728222860CC007FF87B /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE447ECE222F05800049B1AF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE447ECF222F059A0049B1AF /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DEAA0C38222AC73B00A918BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 		DEE30D4822246BC30029A4A7 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				DE447ECE222F05800049B1AF /* Extensions */,
 				DEAA0C38222AC73B00A918BC /* Model */,
 				DEAA0C3A222AC75100A918BC /* View */,
 				DEAA0C39222AC74400A918BC /* Controller */,
@@ -243,6 +254,7 @@
 				DE68D19922246CA000D86E4A /* RestaurantTableViewController.swift in Sources */,
 				DE68D19B2224762F00D86E4A /* RestaurantTableViewCell.swift in Sources */,
 				DEEECFC1222DA82800A1663F /* RestaurantDetailIconTextCell.swift in Sources */,
+				DE447ED0222F059A0049B1AF /* UIColor+Ext.swift in Sources */,
 				DE519729222860CC007FF87B /* RestaurantDetailViewController.swift in Sources */,
 				DEE30D4A22246BC30029A4A7 /* AppDelegate.swift in Sources */,
 			);
