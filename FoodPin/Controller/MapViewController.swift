@@ -42,6 +42,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 
                 if let location = placemark.location {
                     //Display the annotation
+                    print(location.coordinate)
                     annotation.coordinate = location.coordinate
                     
                     self.mapView.showAnnotations([annotation], animated: true)
