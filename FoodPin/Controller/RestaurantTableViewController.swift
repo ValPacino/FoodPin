@@ -41,10 +41,10 @@ class RestaurantTableViewController: UITableViewController {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.hidesBarsOnSwipe = true
         if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
             navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont]
         }
-        
     }
 
     
@@ -168,4 +168,8 @@ class RestaurantTableViewController: UITableViewController {
         return swipeConfiguration
     }
 
+    @IBAction func unwdindToHome(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

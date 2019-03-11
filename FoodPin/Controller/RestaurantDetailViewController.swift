@@ -35,6 +35,9 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         headerView.typeLabel.text = restaurant.type
         headerView.headerImageView.image = UIImage(named: restaurant.image)
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
+        if restaurant.rating.count != 0 {
+            headerView.ratingImageView.image = UIImage(named: restaurant.rating)
+        }
     
         
         tableView.separatorStyle = .none
