@@ -105,8 +105,30 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emptyRestaurantView" destination="e34-wB-u3k" id="Le5-CD-DXS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mhw-10-GmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="e34-wB-u3k">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="os0-LI-8jU">
+                            <rect key="frame" x="28" y="120" width="319" height="355"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="os0-LI-8jU" secondAttribute="height" multiplier="80:89" id="JYY-bR-h5Y"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="lQT-gv-Y76" firstAttribute="trailing" secondItem="os0-LI-8jU" secondAttribute="trailing" constant="28" id="AZR-Cf-rOB"/>
+                        <constraint firstItem="os0-LI-8jU" firstAttribute="leading" secondItem="lQT-gv-Y76" secondAttribute="leading" constant="28" id="Ghv-9G-hr0"/>
+                        <constraint firstItem="os0-LI-8jU" firstAttribute="top" secondItem="lQT-gv-Y76" secondAttribute="top" constant="100" id="kmc-VA-lly"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="lQT-gv-Y76"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1004" y="114.69265367316342"/>
         </scene>
@@ -774,6 +796,7 @@
         <image name="close" width="16" height="16"/>
         <image name="cool" width="78" height="83"/>
         <image name="cross" width="33" height="32"/>
+        <image name="empty" width="310" height="372"/>
         <image name="happy" width="78" height="86"/>
         <image name="love" width="78" height="82"/>
         <image name="photo" width="24" height="18"/>

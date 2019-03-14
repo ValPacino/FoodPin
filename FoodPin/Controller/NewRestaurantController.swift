@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var restaurant: RestaurantMO!
 
     @IBOutlet var nameTextField: RoundedTextField! {
         didSet {
@@ -69,6 +72,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
+            
             let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
             
             let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (action) in
@@ -77,7 +81,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
                     imagePicker.delegate = self
                     imagePicker.allowsEditing = false
                     imagePicker.sourceType = .camera
-                    
+
                     self.present(imagePicker, animated: true, completion: nil)
                 }
             })
@@ -93,8 +97,11 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
                 }
             })
             
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
             photoSourceRequestController.addAction(cameraAction)
             photoSourceRequestController.addAction(photoLibrary)
+            photoSourceRequestController.addAction(cancelAction)
             
             present(photoSourceRequestController, animated: true, completion: nil)
         }
@@ -164,6 +171,24 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
             }
             print("Name: \(description)")
             
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+        
+            
+                restaurant.name = nameTextField.text
+                restaurant.type = typeTextField.text
+                restaurant.location = adressTextField.text
+                restaurant.phone = phoneTextField.text
+                restaurant.summary = descriptionTextView.text
+                restaurant.isVisited = false
+            
+                if let restaurantImage = photoImageView.image {
+                    restaurant.image = restaurantImage.pngData()
+                }
+            
+                print("Saving data to context...")
+                appDelegate.saveContext()
+            }
             dismiss(animated: true, completion: nil)
         }
     }

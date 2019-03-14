@@ -13,6 +13,7 @@
 		DE68D19922246CA000D86E4A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */; };
 		DE68D19B2224762F00D86E4A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */; };
 		DEAA0C37222ABDD000A918BC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA0C36222ABDD000A918BC /* Restaurant.swift */; };
+		DED1D77322383EA8003C276C /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DED1D77122383EA8003C276C /* FoodPin.xcdatamodeld */; };
 		DED3A3B222356C7900F91E84 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED3A3B122356C7900F91E84 /* ReviewViewController.swift */; };
 		DED3A3B62235A72C00F91E84 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED3A3B52235A72C00F91E84 /* NewRestaurantController.swift */; };
 		DEDC33A3222F0F7C001F204A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDC33A2222F0F7C001F204A /* MapKit.framework */; };
@@ -46,6 +47,7 @@
 		DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		DEAA0C36222ABDD000A918BC /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		DED1D77222383EA8003C276C /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		DED3A3B122356C7900F91E84 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		DED3A3B52235A72C00F91E84 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 		DEDC33A2222F0F7C001F204A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -105,8 +107,8 @@
 		DEAA0C39222AC74400A918BC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DE519728222860CC007FF87B /* RestaurantDetailViewController.swift */,
 				DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */,
+				DE519728222860CC007FF87B /* RestaurantDetailViewController.swift */,
 				DEDC33AB222F1F53001F204A /* MapViewController.swift */,
 				DED3A3B122356C7900F91E84 /* ReviewViewController.swift */,
 				DED3A3B52235A72C00F91E84 /* NewRestaurantController.swift */,
@@ -166,6 +168,7 @@
 				DEE30D5222246BC40029A4A7 /* LaunchScreen.storyboard */,
 				DEE30D5522246BC40029A4A7 /* Info.plist */,
 				DEEECF90222D9D2200A1663F /* Ressources */,
+				DED1D77122383EA8003C276C /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				DEEECFC1222DA82800A1663F /* RestaurantDetailIconTextCell.swift in Sources */,
 				DEDC33AC222F1F53001F204A /* MapViewController.swift in Sources */,
 				DE447ED0222F059A0049B1AF /* UIColor+Ext.swift in Sources */,
+				DED1D77322383EA8003C276C /* FoodPin.xcdatamodeld in Sources */,
 				DE519729222860CC007FF87B /* RestaurantDetailViewController.swift in Sources */,
 				DEE30D4A22246BC30029A4A7 /* AppDelegate.swift in Sources */,
 				DE3848FB2236E1A600D66AEE /* RoundedTextField.swift in Sources */,
@@ -497,6 +501,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DED1D77122383EA8003C276C /* FoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DED1D77222383EA8003C276C /* FoodPin.xcdatamodel */,
+			);
+			currentVersion = DED1D77222383EA8003C276C /* FoodPin.xcdatamodel */;
+			path = FoodPin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DEE30D3E22246BC30029A4A7 /* Project object */;
 }
