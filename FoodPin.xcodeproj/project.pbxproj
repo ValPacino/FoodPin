@@ -14,6 +14,8 @@
 		DE50383E223FCC3A00978630 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50383D223FCC3A00978630 /* WalkthroughPageViewController.swift */; };
 		DE503840223FD07D00978630 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50383F223FD07D00978630 /* WalkthroughViewController.swift */; };
 		DE519729222860CC007FF87B /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE519728222860CC007FF87B /* RestaurantDetailViewController.swift */; };
+		DE5457C92240153C00D0A00A /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5457C72240153C00D0A00A /* Discover.storyboard */; };
+		DE5457CB2240155400D0A00A /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5457CA2240155400D0A00A /* About.storyboard */; };
 		DE68D19922246CA000D86E4A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */; };
 		DE68D19B2224762F00D86E4A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */; };
 		DEAA0C37222ABDD000A918BC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA0C36222ABDD000A918BC /* Restaurant.swift */; };
@@ -52,6 +54,8 @@
 		DE50383D223FCC3A00978630 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		DE50383F223FD07D00978630 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		DE519728222860CC007FF87B /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		DE5457C82240153C00D0A00A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Storyboards/Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
+		DE5457CA2240155400D0A00A /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		DEAA0C36222ABDD000A918BC /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				DEE30D4D22246BC30029A4A7 /* Main.storyboard */,
+				DE5457C72240153C00D0A00A /* Discover.storyboard */,
+				DE5457CA2240155400D0A00A /* About.storyboard */,
 				DE503839223FB9CF00978630 /* Onboarding.storyboard */,
 				DEE30D5222246BC40029A4A7 /* LaunchScreen.storyboard */,
 			);
@@ -286,11 +292,13 @@
 				DEEECFBC222D9D8500A1663F /* Rubik-Regular.ttf in Resources */,
 				DEE30D5122246BC40029A4A7 /* Assets.xcassets in Resources */,
 				DEEECFB8222D9D8500A1663F /* Rubik-BoldItalic.ttf in Resources */,
+				DE5457CB2240155400D0A00A /* About.storyboard in Resources */,
 				DEEECFB7222D9D8500A1663F /* Rubik-Italic.ttf in Resources */,
 				DEEECFBB222D9D8500A1663F /* Rubik-Bold.ttf in Resources */,
 				DE50383A223FB9CF00978630 /* Onboarding.storyboard in Resources */,
 				DEEECFB6222D9D8500A1663F /* Rubik-Black.ttf in Resources */,
 				DEEECFB5222D9D8500A1663F /* Rubik-Medium.ttf in Resources */,
+				DE5457C92240153C00D0A00A /* Discover.storyboard in Resources */,
 				DEEECFB3222D9D8500A1663F /* Rubik-MediumItalic.ttf in Resources */,
 				DEEECFBA222D9D8500A1663F /* OFL.txt in Resources */,
 				DEEECFBD222D9D8500A1663F /* Rubik-LightItalic.ttf in Resources */,
@@ -332,6 +340,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DE5457C72240153C00D0A00A /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE5457C82240153C00D0A00A /* Base */,
+			);
+			name = Discover.storyboard;
+			sourceTree = "<group>";
+		};
 		DEE30D4D22246BC30029A4A7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
