@@ -35,7 +35,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JzV-5P-QSu">
-                                            <rect key="frame" x="6" y="2" width="369" height="76"/>
+                                            <rect key="frame" x="22" y="2" width="353" height="76"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0cm-bf-zhf">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -50,7 +50,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="69f-u0-fky">
-                                                    <rect key="frame" x="75" y="0.0" width="294" height="58.5"/>
+                                                    <rect key="frame" x="75" y="0.0" width="278" height="58.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSQ-7Y-SnN">
                                                             <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
@@ -76,7 +76,7 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="JzV-5P-QSu" firstAttribute="leading" secondItem="cIJ-Z8-9gn" secondAttribute="leading" constant="6" id="0Pi-FT-Adg"/>
+                                        <constraint firstItem="JzV-5P-QSu" firstAttribute="leading" secondItem="cIJ-Z8-9gn" secondAttribute="leadingMargin" constant="6" id="0Pi-FT-Adg"/>
                                         <constraint firstItem="JzV-5P-QSu" firstAttribute="top" secondItem="cIJ-Z8-9gn" secondAttribute="top" constant="2" id="FxS-Zm-LLr"/>
                                         <constraint firstAttribute="trailing" secondItem="JzV-5P-QSu" secondAttribute="trailing" id="LeX-iL-EtI"/>
                                         <constraint firstAttribute="bottom" secondItem="JzV-5P-QSu" secondAttribute="bottom" constant="1.5" id="rzc-I4-NQR"/>
@@ -370,13 +370,13 @@
         <!--Restaurant Detail View Controller-->
         <scene sceneID="3hP-Wy-JSa">
             <objects>
-                <viewController id="dvP-rg-Xvw" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="dvP-rg-Xvw" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6sz-kn-2ov">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="64u-wM-eyc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="951"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="5Px-nk-T1B" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>

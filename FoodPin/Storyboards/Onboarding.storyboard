@@ -35,16 +35,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="lCx-As-tRs">
-                                <rect key="frame" x="24" y="50" width="327" height="390.5"/>
+                                <rect key="frame" x="24" y="50" width="327" height="328.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="92F-dd-k8E">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="291"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="229"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="92F-dd-k8E" secondAttribute="height" multiplier="109:97" id="1YF-5X-71N"/>
+                                            <constraint firstAttribute="width" secondItem="92F-dd-k8E" secondAttribute="height" multiplier="327:229" id="O1n-Za-D81"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z9z-7D-QIO">
-                                        <rect key="frame" x="119" y="341" width="89.5" height="49.5"/>
+                                        <rect key="frame" x="119" y="279" width="89.5" height="49.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEADING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTA-cL-HH1">
                                                 <rect key="frame" x="5.5" y="0.0" width="78.5" height="20.5"/>

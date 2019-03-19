@@ -19,6 +19,8 @@
 		DE68D19922246CA000D86E4A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */; };
 		DE68D19B2224762F00D86E4A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */; };
 		DEAA0C37222ABDD000A918BC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA0C36222ABDD000A918BC /* Restaurant.swift */; };
+		DEBFD2492241497000EF6614 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFD2482241497000EF6614 /* AboutTableViewController.swift */; };
+		DEBFD24B2241506800EF6614 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFD24A2241506800EF6614 /* WebViewController.swift */; };
 		DED1D77322383EA8003C276C /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DED1D77122383EA8003C276C /* FoodPin.xcdatamodeld */; };
 		DED3A3B222356C7900F91E84 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED3A3B122356C7900F91E84 /* ReviewViewController.swift */; };
 		DED3A3B62235A72C00F91E84 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED3A3B52235A72C00F91E84 /* NewRestaurantController.swift */; };
@@ -59,6 +61,8 @@
 		DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		DEAA0C36222ABDD000A918BC /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		DEBFD2482241497000EF6614 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		DEBFD24A2241506800EF6614 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DED1D77222383EA8003C276C /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		DED3A3B122356C7900F91E84 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		DED3A3B52235A72C00F91E84 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				DE50383F223FD07D00978630 /* WalkthroughViewController.swift */,
 				DE50383D223FCC3A00978630 /* WalkthroughPageViewController.swift */,
 				DE50383B223FCA0600978630 /* WalkthroughContentViewController.swift */,
+				DEBFD2482241497000EF6614 /* AboutTableViewController.swift */,
+				DEBFD24A2241506800EF6614 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				DEEECFBF222DA14E00A1663F /* RestaurantDetailHeaderView.swift in Sources */,
 				DED3A3B222356C7900F91E84 /* ReviewViewController.swift in Sources */,
 				DE50383E223FCC3A00978630 /* WalkthroughPageViewController.swift in Sources */,
+				DEBFD24B2241506800EF6614 /* WebViewController.swift in Sources */,
 				DED3A3B62235A72C00F91E84 /* NewRestaurantController.swift in Sources */,
 				DEAA0C37222ABDD000A918BC /* Restaurant.swift in Sources */,
 				DEEECFC3222DA92500A1663F /* RestaurantDetailTextCell.swift in Sources */,
@@ -326,6 +333,7 @@
 				DE68D19922246CA000D86E4A /* RestaurantTableViewController.swift in Sources */,
 				DE68D19B2224762F00D86E4A /* RestaurantTableViewCell.swift in Sources */,
 				DEEECFC1222DA82800A1663F /* RestaurantDetailIconTextCell.swift in Sources */,
+				DEBFD2492241497000EF6614 /* AboutTableViewController.swift in Sources */,
 				DE50383C223FCA0600978630 /* WalkthroughContentViewController.swift in Sources */,
 				DEDC33AC222F1F53001F204A /* MapViewController.swift in Sources */,
 				DE447ED0222F059A0049B1AF /* UIColor+Ext.swift in Sources */,
