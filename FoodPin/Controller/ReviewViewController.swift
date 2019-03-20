@@ -2,7 +2,7 @@
 //  ReviewViewController.swift
 //  FoodPin
 //
-//  Created by Öcalan on 10/03/2019.
+//  Created by ValPacino on 10/03/2019.
 //  Copyright © 2019 Froidefond Valentin. All rights reserved.
 //
 

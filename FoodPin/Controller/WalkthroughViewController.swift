@@ -2,7 +2,7 @@
 //  WalkthroughViewController.swift
 //  FoodPin
 //
-//  Created by Öcalan on 18/03/2019.
+//  Created by ValPacino on 18/03/2019.
 //  Copyright © 2019 Froidefond Valentin. All rights reserved.
 //
 

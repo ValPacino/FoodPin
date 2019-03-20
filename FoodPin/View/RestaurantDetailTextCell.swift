@@ -2,7 +2,7 @@
 //  RestaurantDetailTextCell.swift
 //  FoodPin
 //
-//  Created by Öcalan on 04/03/2019.
+//  Created by ValPacino on 04/03/2019.
 //  Copyright © 2019 Froidefond Valentin. All rights reserved.
 //
 

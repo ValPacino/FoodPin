@@ -18,6 +18,8 @@
 		DE5457CB2240155400D0A00A /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5457CA2240155400D0A00A /* About.storyboard */; };
 		DE68D19922246CA000D86E4A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */; };
 		DE68D19B2224762F00D86E4A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */; };
+		DE6A648E224168C700BB7571 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6A648D224168C700BB7571 /* CloudKit.framework */; };
+		DE6A64902241741100BB7571 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A648F2241741100BB7571 /* DiscoverTableViewController.swift */; };
 		DEAA0C37222ABDD000A918BC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA0C36222ABDD000A918BC /* Restaurant.swift */; };
 		DEBFD2492241497000EF6614 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFD2482241497000EF6614 /* AboutTableViewController.swift */; };
 		DEBFD24B2241506800EF6614 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFD24A2241506800EF6614 /* WebViewController.swift */; };
@@ -46,6 +48,7 @@
 		DEEECFBF222DA14E00A1663F /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEECFBE222DA14E00A1663F /* RestaurantDetailHeaderView.swift */; };
 		DEEECFC1222DA82800A1663F /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEECFC0222DA82800A1663F /* RestaurantDetailIconTextCell.swift */; };
 		DEEECFC3222DA92500A1663F /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEECFC2222DA92500A1663F /* RestaurantDetailTextCell.swift */; };
+		DEF35E29224248A00020B5D7 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF35E28224248A00020B5D7 /* DiscoverCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		DE5457CA2240155400D0A00A /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		DE68D19822246CA000D86E4A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		DE6A648A2241667800BB7571 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
+		DE6A648D224168C700BB7571 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		DE6A648F2241741100BB7571 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		DEAA0C36222ABDD000A918BC /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		DEBFD2482241497000EF6614 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		DEBFD24A2241506800EF6614 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 		DEEECFBE222DA14E00A1663F /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		DEEECFC0222DA82800A1663F /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		DEEECFC2222DA92500A1663F /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
+		DEF35E28224248A00020B5D7 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDC33A3222F0F7C001F204A /* MapKit.framework in Frameworks */,
+				DE6A648E224168C700BB7571 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +153,7 @@
 				DE50383B223FCA0600978630 /* WalkthroughContentViewController.swift */,
 				DEBFD2482241497000EF6614 /* AboutTableViewController.swift */,
 				DEBFD24A2241506800EF6614 /* WebViewController.swift */,
+				DE6A648F2241741100BB7571 /* DiscoverTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 				DEDC33A4222F13A5001F204A /* RestaurantDetailSeparatorCell.swift */,
 				DEDC33A7222F14C1001F204A /* RestaurantDetailMapCell.swift */,
 				DE3848FA2236E1A600D66AEE /* RoundedTextField.swift */,
+				DEF35E28224248A00020B5D7 /* DiscoverCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +176,7 @@
 		DEDC33A1222F0F7C001F204A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE6A648D224168C700BB7571 /* CloudKit.framework */,
 				DEDC33A2222F0F7C001F204A /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -191,6 +202,7 @@
 		DEE30D4822246BC30029A4A7 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				DE6A648A2241667800BB7571 /* FoodPin.entitlements */,
 				DE447ECE222F05800049B1AF /* Extensions */,
 				DEAA0C38222AC73B00A918BC /* Model */,
 				DEAA0C3A222AC75100A918BC /* View */,
@@ -267,6 +279,12 @@
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -324,6 +342,7 @@
 				DEDC33A8222F14C1001F204A /* RestaurantDetailMapCell.swift in Sources */,
 				DEEECFBF222DA14E00A1663F /* RestaurantDetailHeaderView.swift in Sources */,
 				DED3A3B222356C7900F91E84 /* ReviewViewController.swift in Sources */,
+				DEF35E29224248A00020B5D7 /* DiscoverCell.swift in Sources */,
 				DE50383E223FCC3A00978630 /* WalkthroughPageViewController.swift in Sources */,
 				DEBFD24B2241506800EF6614 /* WebViewController.swift in Sources */,
 				DED3A3B62235A72C00F91E84 /* NewRestaurantController.swift in Sources */,
@@ -337,6 +356,7 @@
 				DE50383C223FCA0600978630 /* WalkthroughContentViewController.swift in Sources */,
 				DEDC33AC222F1F53001F204A /* MapViewController.swift in Sources */,
 				DE447ED0222F059A0049B1AF /* UIColor+Ext.swift in Sources */,
+				DE6A64902241741100BB7571 /* DiscoverTableViewController.swift in Sources */,
 				DED1D77322383EA8003C276C /* FoodPin.xcdatamodeld in Sources */,
 				DE519729222860CC007FF87B /* RestaurantDetailViewController.swift in Sources */,
 				DEE30D4A22246BC30029A4A7 /* AppDelegate.swift in Sources */,
@@ -495,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT895NDA3W;
 				INFOPLIST_FILE = FoodPin/Info.plist;
@@ -513,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT895NDA3W;
 				INFOPLIST_FILE = FoodPin/Info.plist;

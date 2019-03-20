@@ -797,13 +797,14 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uiQ-sQ-v5V" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CI0-5q-MeF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Goj-HR-WqQ" kind="relationship" relationship="viewControllers" id="K2p-HD-rar"/>
-                        <segue destination="oSx-sS-2BY" kind="relationship" relationship="viewControllers" id="Cz8-kc-EsO"/>
                         <segue destination="Y7R-Kj-E5U" kind="relationship" relationship="viewControllers" id="eON-fb-RjO"/>
+                        <segue destination="oSx-sS-2BY" kind="relationship" relationship="viewControllers" id="3Pq-Xu-QPK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EW0-rr-Ngf" userLabel="First Responder" sceneMemberID="firstResponder"/>
