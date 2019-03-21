@@ -48,7 +48,6 @@ class DiscoverTableViewController: UITableViewController {
         refreshControl?.backgroundColor = UIColor.white
         refreshControl?.tintColor = UIColor.gray
         refreshControl?.addTarget(self, action: #selector(fetchRecordsFromCloud), for: UIControl.Event.valueChanged)
-        print("hello")
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,9 +66,7 @@ class DiscoverTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("block")
         let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoverCell", for: indexPath) as! DiscoverCell
-        print("fuck")
         // Configure the cell...
         let restaurant = restaurants[indexPath.row]
         cell.nameLabel.text = restaurant.object(forKey: "name") as? String

@@ -20,6 +20,7 @@
 		DE68D19B2224762F00D86E4A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68D19A2224762F00D86E4A /* RestaurantTableViewCell.swift */; };
 		DE6A648E224168C700BB7571 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6A648D224168C700BB7571 /* CloudKit.framework */; };
 		DE6A64902241741100BB7571 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A648F2241741100BB7571 /* DiscoverTableViewController.swift */; };
+		DE6ADB132242CD57004092A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE6ADB112242CD57004092A5 /* Localizable.strings */; };
 		DEAA0C37222ABDD000A918BC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA0C36222ABDD000A918BC /* Restaurant.swift */; };
 		DEBFD2492241497000EF6614 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFD2482241497000EF6614 /* AboutTableViewController.swift */; };
 		DEBFD24B2241506800EF6614 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFD24A2241506800EF6614 /* WebViewController.swift */; };
@@ -66,6 +67,8 @@
 		DE6A648A2241667800BB7571 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
 		DE6A648D224168C700BB7571 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DE6A648F2241741100BB7571 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		DE6ADB122242CD57004092A5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DE6ADB142242CD68004092A5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DEAA0C36222ABDD000A918BC /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		DEBFD2482241497000EF6614 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		DEBFD24A2241506800EF6614 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 				DEE30D4922246BC30029A4A7 /* AppDelegate.swift */,
 				DEE30D5022246BC40029A4A7 /* Assets.xcassets */,
 				DEE30D5522246BC40029A4A7 /* Info.plist */,
+				DE6ADB112242CD57004092A5 /* Localizable.strings */,
 				DEEECF90222D9D2200A1663F /* Ressources */,
 				DED1D77122383EA8003C276C /* FoodPin.xcdatamodeld */,
 			);
@@ -296,6 +300,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = DEE30D3D22246BC30029A4A7;
 			productRefGroup = DEE30D4722246BC30029A4A7 /* Products */;
@@ -325,6 +330,7 @@
 				DE5457C92240153C00D0A00A /* Discover.storyboard in Resources */,
 				DEEECFB3222D9D8500A1663F /* Rubik-MediumItalic.ttf in Resources */,
 				DEEECFBA222D9D8500A1663F /* OFL.txt in Resources */,
+				DE6ADB132242CD57004092A5 /* Localizable.strings in Resources */,
 				DEEECFBD222D9D8500A1663F /* Rubik-LightItalic.ttf in Resources */,
 				DEE30D4F22246BC30029A4A7 /* Main.storyboard in Resources */,
 				DEEECFB4222D9D8500A1663F /* Rubik-BlackItalic.ttf in Resources */,
@@ -374,6 +380,15 @@
 				DE5457C82240153C00D0A00A /* Base */,
 			);
 			name = Discover.storyboard;
+			sourceTree = "<group>";
+		};
+		DE6ADB112242CD57004092A5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE6ADB122242CD57004092A5 /* zh-Hant */,
+				DE6ADB142242CD68004092A5 /* de */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		DEE30D4D22246BC30029A4A7 /* Main.storyboard */ = {
