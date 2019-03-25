@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate,UISearchResultsUpdating {
     
@@ -61,6 +62,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         searchController.searchBar.barTintColor = .white
         searchController.searchBar.backgroundImage = UIImage()
         searchController.searchBar.tintColor = UIColor(red: 231, green: 76, blue: 60)
+        
+        prepareNotification()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -283,4 +286,48 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             tableView.reloadData()
         }
     }
+    
+    func prepareNotification() {
+        
+        if restaurants.count <= 0 {
+            print("Go here")
+            return
+        }
+        
+        let randomNum = Int(arc4random_uniform(UInt32(restaurants.count)))
+        let suggestedRestaurant = restaurants[randomNum]
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Restaurant Recommendation"
+        content.subtitle = "Try new food today"
+        content.body = "I recommend you to check out \(suggestedRestaurant.name!). The restaurant is one of your favorites. It is located at \(suggestedRestaurant.location!). Would you like to give it a try ?"
+        content.sound = UNNotificationSound.default
+        content.userInfo = ["phone": suggestedRestaurant.phone!]
+        
+        let tempDirURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+        let tempFileURL = tempDirURL.appendingPathComponent("suggested-restaurant.jpg")
+        
+        if let image = UIImage(data: suggestedRestaurant.image! as Data) {
+            try? image.jpegData(compressionQuality: 1.0)?.write(to: tempFileURL)
+            if let restaurantImage = try? UNNotificationAttachment(identifier: "restaurantImage", url: tempFileURL, options: nil) {
+                print("là")
+                content.attachments = [restaurantImage]
+            }
+        }
+        
+        let categoryIdentifer = "foodpin.restaurantAction"
+        let makeReservationAction = UNNotificationAction(identifier: "foodpin.makeReservation", title: "Reserve a table", options: [.foreground])
+        let cancelAction = UNNotificationAction(identifier: "foodpin.cancel", title: "Later...", options: [])
+        let category = UNNotificationCategory(identifier: categoryIdentifer, actions: [makeReservationAction, cancelAction], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        content.categoryIdentifier = categoryIdentifer
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: "foodpin.restaurantSuggestion", content: content, trigger: trigger)
+        
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
+    }
+    
 }
